@@ -1,0 +1,45 @@
+2012-12-09 21:05:17.702601: ENGINE starting
+2012-12-09 21:05:17.702918: ENGINE loading STUDENT ENGINE part 1
+2012-12-09 21:05:17.708223: ENGINE loaded player module: OKComputer as player 1
+2012-12-09 21:05:17.708266: QUORIDOR ENGINE CLIENT 1.0.3 by Adam Oest initializing
+2012-12-09 21:05:17.860213: ENGINE calling STUDENT ENGINE init
+2012-12-09 21:05:17.860293: STUDENT ENGINE init call successfully returned
+2012-12-09 21:05:17.860332: ENGINE calling init() for player 1
+2012-12-09 21:05:17.860707: OKComputer initialized as player 1
+2012-12-09 21:05:17.860769: ENGINE processing move # 1
+2012-12-09 21:05:17.860792: ENGINE getting move for player 1 from PRE_MOVE list 
+2012-12-09 21:05:17.860820: ENGINE validating player 1 move. Player 1 Wall: [0,1] -> [2,1]
+2012-12-09 21:05:17.860860: ENGINE uploading move to web engine
+2012-12-09 21:05:17.965068: ENGINE calling STUDENT ENGINE last_move
+2012-12-09 21:05:17.965137: STUDENT ENGINE last_move call successfully returned
+2012-12-09 21:05:17.965165: ENGINE finished processing player 1's move
+2012-12-09 21:05:17.965543: ENGINE notifying player 1 of last move
+2012-12-09 21:05:17.965656: ENGINE finished with next move
+2012-12-09 21:05:17.965740: ENGINE processing move # 2
+2012-12-09 21:05:17.965768: ENGINE getting move for player 1 from PRE_MOVE list 
+2012-12-09 21:05:17.965798: ENGINE validating player 1 move. Player 1 Wall: [1,2] -> [1,4]
+2012-12-09 21:05:17.965842: ENGINE uploading move to web engine
+2012-12-09 21:05:18.069781: ENGINE calling STUDENT ENGINE last_move
+2012-12-09 21:05:18.069836: STUDENT ENGINE last_move call successfully returned
+2012-12-09 21:05:18.069864: ENGINE finished processing player 1's move
+2012-12-09 21:05:18.070211: ENGINE notifying player 1 of last move
+2012-12-09 21:05:18.070355: ENGINE finished with next move
+2012-12-09 21:05:18.070437: ENGINE processing move # 3
+2012-12-09 21:05:18.070465: ENGINE getting move for player 1 from PRE_MOVE list 
+2012-12-09 21:05:18.070497: ENGINE validating player 1 move. Player 1 Wall: [1,3] -> [3,3]
+2012-12-09 21:05:18.070539: ENGINE uploading move to web engine
+2012-12-09 21:05:18.173974: ENGINE calling STUDENT ENGINE last_move
+2012-12-09 21:05:18.174029: STUDENT ENGINE last_move call successfully returned
+2012-12-09 21:05:18.174056: ENGINE finished processing player 1's move
+2012-12-09 21:05:18.174381: ENGINE notifying player 1 of last move
+2012-12-09 21:05:18.174486: ENGINE finished with next move
+2012-12-09 21:05:18.174618: MODEL: starting path queries
+2012-12-09 21:05:18.176685: ENGINE called STUDENT ENGINE get_shortest_path
+2012-12-09 21:05:18.176712: ERROR: list index out of range
+2012-12-09 21:05:18.177208: TRACE: 
+Traceback (most recent call last):
+  File "C:\Users\Adam\Desktop\a\Quoridor_Client_2121\Releases\1.0.3\Python 3.3\Model\__init__.py", line 560, in studentEngineCallNoLog
+  File "/Users/robert/Documents/eclipse-workspace/CSProject-Quoridor/StudentEngines/rgh7614/__init__.py", line 158, in get_shortest_path
+    destination = engineData.board[r2][c2]
+IndexError: list index out of range
+

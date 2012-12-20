@@ -1,0 +1,595 @@
+2012-11-30 00:55:58.338683: ENGINE starting
+2012-11-30 00:55:58.340008: ENGINE loaded player module: OKComputer as player 1
+2012-11-30 00:55:58.340277: ENGINE loaded player module: Human as player 2
+2012-11-30 00:55:58.340306: QUORIDOR ENGINE CLIENT 1.0.3 by Adam Oest initializing
+2012-11-30 00:55:58.476118: ENGINE calling init() for player 2
+2012-11-30 00:55:58.476237: ENGINE calling init() for player 1
+2012-11-30 00:55:58.476589: OKComputer initialized as player 1
+2012-11-30 00:55:58.547193: ENGINE GUI accessible at:
+https://adelaide.cs.rit.edu/~royale/quoridorui/gameview/animations.500/public.c13a9da64831b71956d8e622b7c63d534c03e3c750b84a6e71163/partone.0/apikey.282ea329acc12391d03/gameid.1222/
+2012-11-30 00:55:58.547411: ENGINE processing move # 1
+2012-11-30 00:55:58.547446: ENGINE getting next move from player 1
+2012-11-30 00:55:58.551850: ENGINE validating player 1 move. Player 1 Move: [8,4] -> [7,4]
+2012-11-30 00:55:58.552019: ENGINE uploading move to web engine
+2012-11-30 00:55:58.613102: ENGINE finished processing player 1's move
+2012-11-30 00:55:58.613397: ENGINE notifying player 2 of last move
+2012-11-30 00:55:58.613864: ENGINE notifying player 1 of last move
+2012-11-30 00:55:58.614014: ENGINE finished with next move
+2012-11-30 00:55:58.614126: ENGINE processing human move # 2
+2012-11-30 00:55:58.614173: ENGINE waiting for human move
+2012-11-30 00:56:08.233359: ENGINE downloaded human move. Player 2 Wall: [6,4] -> [8,4]
+2012-11-30 00:56:08.233421: ENGINE finished processing player 2's move
+2012-11-30 00:56:08.233692: ENGINE notifying player 2 of last move
+2012-11-30 00:56:08.233999: ENGINE notifying player 1 of last move
+2012-11-30 00:56:08.234109: ENGINE finished with next move
+2012-11-30 00:56:08.234174: ENGINE processing move # 3
+2012-11-30 00:56:08.234198: ENGINE getting next move from player 1
+2012-11-30 00:56:08.236457: ENGINE validating player 1 move. Player 1 Move: [7,4] -> [6,4]
+2012-11-30 00:56:08.236517: ENGINE uploading move to web engine
+2012-11-30 00:56:08.330787: ENGINE finished processing player 1's move
+2012-11-30 00:56:08.331097: ENGINE notifying player 2 of last move
+2012-11-30 00:56:08.331440: ENGINE notifying player 1 of last move
+2012-11-30 00:56:08.331527: ENGINE finished with next move
+2012-11-30 00:56:08.331600: ENGINE processing human move # 4
+2012-11-30 00:56:08.331629: ENGINE waiting for human move
+2012-11-30 00:56:16.352160: ENGINE downloaded human move. Player 2 Wall: [6,4] -> [6,6]
+2012-11-30 00:56:16.352234: ENGINE finished processing player 2's move
+2012-11-30 00:56:16.352524: ENGINE notifying player 2 of last move
+2012-11-30 00:56:16.352870: ENGINE notifying player 1 of last move
+2012-11-30 00:56:16.352968: ENGINE finished with next move
+2012-11-30 00:56:16.353036: ENGINE processing move # 5
+2012-11-30 00:56:16.353060: ENGINE getting next move from player 1
+2012-11-30 00:56:16.355243: ENGINE validating player 1 move. Player 1 Move: [6,4] -> [6,5]
+2012-11-30 00:56:16.355302: ENGINE uploading move to web engine
+2012-11-30 00:56:16.468975: ENGINE finished processing player 1's move
+2012-11-30 00:56:16.469241: ENGINE notifying player 2 of last move
+2012-11-30 00:56:16.469548: ENGINE notifying player 1 of last move
+2012-11-30 00:56:16.469631: ENGINE finished with next move
+2012-11-30 00:56:16.469700: ENGINE processing human move # 6
+2012-11-30 00:56:16.469732: ENGINE waiting for human move
+2012-11-30 00:56:19.577005: ENGINE downloaded human move. Player 2 Move: [0,4] -> [1,4]
+2012-11-30 00:56:19.577064: ENGINE finished processing player 2's move
+2012-11-30 00:56:19.577378: ENGINE notifying player 2 of last move
+2012-11-30 00:56:19.577792: ENGINE notifying player 1 of last move
+2012-11-30 00:56:19.577896: ENGINE finished with next move
+2012-11-30 00:56:19.577974: ENGINE processing move # 7
+2012-11-30 00:56:19.578001: ENGINE getting next move from player 1
+2012-11-30 00:56:19.580185: ENGINE validating player 1 move. Player 1 Move: [6,5] -> [6,6]
+2012-11-30 00:56:19.580249: ENGINE uploading move to web engine
+2012-11-30 00:56:19.700627: ENGINE finished processing player 1's move
+2012-11-30 00:56:19.700956: ENGINE notifying player 2 of last move
+2012-11-30 00:56:19.706998: ENGINE notifying player 1 of last move
+2012-11-30 00:56:19.712793: ENGINE finished with next move
+2012-11-30 00:56:19.712884: ENGINE processing human move # 8
+2012-11-30 00:56:19.712912: ENGINE waiting for human move
+2012-11-30 00:56:25.868447: ENGINE downloaded human move. Player 2 Wall: [6,6] -> [6,8]
+2012-11-30 00:56:25.868514: ENGINE finished processing player 2's move
+2012-11-30 00:56:25.868793: ENGINE notifying player 2 of last move
+2012-11-30 00:56:25.874875: ENGINE notifying player 1 of last move
+2012-11-30 00:56:25.874986: ENGINE finished with next move
+2012-11-30 00:56:25.875068: ENGINE processing move # 9
+2012-11-30 00:56:25.875094: ENGINE getting next move from player 1
+2012-11-30 00:56:25.877004: ENGINE validating player 1 move. Player 1 Move: [6,6] -> [6,7]
+2012-11-30 00:56:25.877060: ENGINE uploading move to web engine
+2012-11-30 00:56:25.971074: ENGINE finished processing player 1's move
+2012-11-30 00:56:25.971333: ENGINE notifying player 2 of last move
+2012-11-30 00:56:25.971666: ENGINE notifying player 1 of last move
+2012-11-30 00:56:25.977448: ENGINE finished with next move
+2012-11-30 00:56:25.977568: ENGINE processing human move # 10
+2012-11-30 00:56:25.977598: ENGINE waiting for human move
+2012-11-30 00:56:30.133024: ENGINE downloaded human move. Player 2 Move: [1,4] -> [2,4]
+2012-11-30 00:56:30.133099: ENGINE finished processing player 2's move
+2012-11-30 00:56:30.133383: ENGINE notifying player 2 of last move
+2012-11-30 00:56:30.133754: ENGINE notifying player 1 of last move
+2012-11-30 00:56:30.133887: ENGINE finished with next move
+2012-11-30 00:56:30.133968: ENGINE processing move # 11
+2012-11-30 00:56:30.133994: ENGINE getting next move from player 1
+2012-11-30 00:56:30.676358: ENGINE validating player 1 move. Player 1 Wall: [1,0] -> [1,2]
+2012-11-30 00:56:30.676439: ENGINE uploading move to web engine
+2012-11-30 00:56:30.789533: ENGINE finished processing player 1's move
+2012-11-30 00:56:30.789874: ENGINE notifying player 2 of last move
+2012-11-30 00:56:30.790181: ENGINE notifying player 1 of last move
+2012-11-30 00:56:30.790270: ENGINE finished with next move
+2012-11-30 00:56:30.790339: ENGINE processing human move # 12
+2012-11-30 00:56:30.790370: ENGINE waiting for human move
+2012-11-30 00:56:39.928092: ENGINE downloaded human move. Player 2 Wall: [6,8] -> [8,8]
+2012-11-30 00:56:39.928156: ENGINE finished processing player 2's move
+2012-11-30 00:56:39.928445: ENGINE notifying player 2 of last move
+2012-11-30 00:56:39.928827: ENGINE notifying player 1 of last move
+2012-11-30 00:56:39.928934: ENGINE finished with next move
+2012-11-30 00:56:39.929014: ENGINE processing move # 13
+2012-11-30 00:56:39.929040: ENGINE getting next move from player 1
+2012-11-30 00:56:40.469804: ENGINE validating player 1 move. Player 1 Wall: [6,2] -> [6,4]
+2012-11-30 00:56:40.469884: ENGINE uploading move to web engine
+2012-11-30 00:56:40.572046: ENGINE finished processing player 1's move
+2012-11-30 00:56:40.572312: ENGINE notifying player 2 of last move
+2012-11-30 00:56:40.572636: ENGINE notifying player 1 of last move
+2012-11-30 00:56:40.572730: ENGINE finished with next move
+2012-11-30 00:56:40.572804: ENGINE processing human move # 14
+2012-11-30 00:56:40.572836: ENGINE waiting for human move
+2012-11-30 00:56:52.665620: ENGINE downloaded human move. Player 2 Move: [2,4] -> [3,4]
+2012-11-30 00:56:52.665685: ENGINE finished processing player 2's move
+2012-11-30 00:56:52.665964: ENGINE notifying player 2 of last move
+2012-11-30 00:56:52.666305: ENGINE notifying player 1 of last move
+2012-11-30 00:56:52.666394: ENGINE finished with next move
+2012-11-30 00:56:52.666467: ENGINE processing move # 15
+2012-11-30 00:56:52.666491: ENGINE getting next move from player 1
+2012-11-30 00:56:52.668421: ENGINE validating player 1 move. Player 1 Move: [6,7] -> [7,7]
+2012-11-30 00:56:52.668483: ENGINE uploading move to web engine
+2012-11-30 00:56:52.764839: ENGINE finished processing player 1's move
+2012-11-30 00:56:52.765109: ENGINE notifying player 2 of last move
+2012-11-30 00:56:52.776236: ENGINE notifying player 1 of last move
+2012-11-30 00:56:52.781906: ENGINE finished with next move
+2012-11-30 00:56:52.782003: ENGINE processing human move # 16
+2012-11-30 00:56:52.782034: ENGINE waiting for human move
+2012-11-30 00:57:02.373883: ENGINE downloaded human move. Player 2 Wall: [8,6] -> [8,8]
+2012-11-30 00:57:02.373947: ENGINE finished processing player 2's move
+2012-11-30 00:57:02.374253: ENGINE notifying player 2 of last move
+2012-11-30 00:57:02.374751: ENGINE notifying player 1 of last move
+2012-11-30 00:57:02.374876: ENGINE finished with next move
+2012-11-30 00:57:02.374964: ENGINE processing move # 17
+2012-11-30 00:57:02.375004: ENGINE getting next move from player 1
+2012-11-30 00:57:02.377195: ENGINE validating player 1 move. Player 1 Move: [7,7] -> [7,6]
+2012-11-30 00:57:02.377253: ENGINE uploading move to web engine
+2012-11-30 00:57:02.470393: ENGINE finished processing player 1's move
+2012-11-30 00:57:02.470746: ENGINE notifying player 2 of last move
+2012-11-30 00:57:02.476643: ENGINE notifying player 1 of last move
+2012-11-30 00:57:02.481948: ENGINE finished with next move
+2012-11-30 00:57:02.482029: ENGINE processing human move # 18
+2012-11-30 00:57:02.482058: ENGINE waiting for human move
+2012-11-30 00:57:05.032104: ENGINE downloaded human move. Player 2 Move: [3,4] -> [3,5]
+2012-11-30 00:57:05.032167: ENGINE finished processing player 2's move
+2012-11-30 00:57:05.032469: ENGINE notifying player 2 of last move
+2012-11-30 00:57:05.032903: ENGINE notifying player 1 of last move
+2012-11-30 00:57:05.033005: ENGINE finished with next move
+2012-11-30 00:57:05.033076: ENGINE processing move # 19
+2012-11-30 00:57:05.033116: ENGINE getting next move from player 1
+2012-11-30 00:57:05.534173: ENGINE validating player 1 move. Player 1 Wall: [5,2] -> [5,4]
+2012-11-30 00:57:05.534270: ENGINE uploading move to web engine
+2012-11-30 00:57:05.636985: ENGINE finished processing player 1's move
+2012-11-30 00:57:05.637262: ENGINE notifying player 2 of last move
+2012-11-30 00:57:05.637561: ENGINE notifying player 1 of last move
+2012-11-30 00:57:05.637652: ENGINE finished with next move
+2012-11-30 00:57:05.637722: ENGINE processing human move # 20
+2012-11-30 00:57:05.637752: ENGINE waiting for human move
+2012-11-30 00:57:08.027286: ENGINE downloaded human move. Player 2 Move: [3,5] -> [4,5]
+2012-11-30 00:57:08.027347: ENGINE finished processing player 2's move
+2012-11-30 00:57:08.027623: ENGINE notifying player 2 of last move
+2012-11-30 00:57:08.033136: ENGINE notifying player 1 of last move
+2012-11-30 00:57:08.033267: ENGINE finished with next move
+2012-11-30 00:57:08.033361: ENGINE processing move # 21
+2012-11-30 00:57:08.033391: ENGINE getting next move from player 1
+2012-11-30 00:57:08.509849: ENGINE validating player 1 move. Player 1 Wall: [4,8] -> [6,8]
+2012-11-30 00:57:08.509944: ENGINE uploading move to web engine
+2012-11-30 00:57:08.630538: ENGINE finished processing player 1's move
+2012-11-30 00:57:08.630847: ENGINE notifying player 2 of last move
+2012-11-30 00:57:08.631183: ENGINE notifying player 1 of last move
+2012-11-30 00:57:08.631291: ENGINE finished with next move
+2012-11-30 00:57:08.631367: ENGINE processing human move # 22
+2012-11-30 00:57:08.631395: ENGINE waiting for human move
+2012-11-30 00:57:21.349342: ENGINE downloaded human move. Player 2 Move: [4,5] -> [4,6]
+2012-11-30 00:57:21.349400: ENGINE finished processing player 2's move
+2012-11-30 00:57:21.349675: ENGINE notifying player 2 of last move
+2012-11-30 00:57:21.355283: ENGINE notifying player 1 of last move
+2012-11-30 00:57:21.355380: ENGINE finished with next move
+2012-11-30 00:57:21.355452: ENGINE processing move # 23
+2012-11-30 00:57:21.355495: ENGINE getting next move from player 1
+2012-11-30 00:57:21.811044: ENGINE validating player 1 move. Player 1 Wall: [4,7] -> [4,9]
+2012-11-30 00:57:21.811123: ENGINE uploading move to web engine
+2012-11-30 00:57:21.956706: ENGINE finished processing player 1's move
+2012-11-30 00:57:21.956969: ENGINE notifying player 2 of last move
+2012-11-30 00:57:21.962717: ENGINE notifying player 1 of last move
+2012-11-30 00:57:21.968530: ENGINE finished with next move
+2012-11-30 00:57:21.968611: ENGINE processing human move # 24
+2012-11-30 00:57:21.968639: ENGINE waiting for human move
+2012-11-30 00:57:25.092056: ENGINE downloaded human move. Player 2 Move: [4,6] -> [4,5]
+2012-11-30 00:57:25.092126: ENGINE finished processing player 2's move
+2012-11-30 00:57:25.092426: ENGINE notifying player 2 of last move
+2012-11-30 00:57:25.092765: ENGINE notifying player 1 of last move
+2012-11-30 00:57:25.092856: ENGINE finished with next move
+2012-11-30 00:57:25.092927: ENGINE processing move # 25
+2012-11-30 00:57:25.092951: ENGINE getting next move from player 1
+2012-11-30 00:57:25.094987: ENGINE validating player 1 move. Player 1 Move: [7,6] -> [7,5]
+2012-11-30 00:57:25.095047: ENGINE uploading move to web engine
+2012-11-30 00:57:25.222923: ENGINE finished processing player 1's move
+2012-11-30 00:57:25.223262: ENGINE notifying player 2 of last move
+2012-11-30 00:57:25.223620: ENGINE notifying player 1 of last move
+2012-11-30 00:57:25.223730: ENGINE finished with next move
+2012-11-30 00:57:25.223827: ENGINE processing human move # 26
+2012-11-30 00:57:25.223876: ENGINE waiting for human move
+2012-11-30 00:57:28.211088: ENGINE downloaded human move. Player 2 Move: [4,5] -> [4,4]
+2012-11-30 00:57:28.211148: ENGINE finished processing player 2's move
+2012-11-30 00:57:28.211388: ENGINE notifying player 2 of last move
+2012-11-30 00:57:28.211754: ENGINE notifying player 1 of last move
+2012-11-30 00:57:28.211842: ENGINE finished with next move
+2012-11-30 00:57:28.211909: ENGINE processing move # 27
+2012-11-30 00:57:28.211932: ENGINE getting next move from player 1
+2012-11-30 00:57:28.637176: ENGINE validating player 1 move. Player 1 Wall: [4,2] -> [6,2]
+2012-11-30 00:57:28.637267: ENGINE uploading move to web engine
+2012-11-30 00:57:28.739754: ENGINE finished processing player 1's move
+2012-11-30 00:57:28.740034: ENGINE notifying player 2 of last move
+2012-11-30 00:57:28.745519: ENGINE notifying player 1 of last move
+2012-11-30 00:57:28.751105: ENGINE finished with next move
+2012-11-30 00:57:28.751199: ENGINE processing human move # 28
+2012-11-30 00:57:28.751235: ENGINE waiting for human move
+2012-11-30 00:57:32.919435: ENGINE downloaded human move. Player 2 Move: [4,4] -> [4,3]
+2012-11-30 00:57:32.919506: ENGINE finished processing player 2's move
+2012-11-30 00:57:32.919782: ENGINE notifying player 2 of last move
+2012-11-30 00:57:32.925227: ENGINE notifying player 1 of last move
+2012-11-30 00:57:32.925317: ENGINE finished with next move
+2012-11-30 00:57:32.925393: ENGINE processing move # 29
+2012-11-30 00:57:32.925419: ENGINE getting next move from player 1
+2012-11-30 00:57:33.321346: ENGINE validating player 1 move. Player 1 Wall: [2,2] -> [4,2]
+2012-11-30 00:57:33.321435: ENGINE uploading move to web engine
+2012-11-30 00:57:33.407298: ENGINE finished processing player 1's move
+2012-11-30 00:57:33.407570: ENGINE notifying player 2 of last move
+2012-11-30 00:57:33.407950: ENGINE notifying player 1 of last move
+2012-11-30 00:57:33.413705: ENGINE finished with next move
+2012-11-30 00:57:33.413815: ENGINE processing human move # 30
+2012-11-30 00:57:33.413851: ENGINE waiting for human move
+2012-11-30 00:57:37.132372: ENGINE downloaded human move. Player 2 Move: [4,3] -> [4,2]
+2012-11-30 00:57:37.132432: ENGINE finished processing player 2's move
+2012-11-30 00:57:37.132710: ENGINE notifying player 2 of last move
+2012-11-30 00:57:37.133018: ENGINE notifying player 1 of last move
+2012-11-30 00:57:37.133110: ENGINE finished with next move
+2012-11-30 00:57:37.133175: ENGINE processing move # 31
+2012-11-30 00:57:37.133214: ENGINE getting next move from player 1
+2012-11-30 00:57:37.489179: ENGINE validating player 1 move. Player 1 Wall: [3,2] -> [3,4]
+2012-11-30 00:57:37.489265: ENGINE uploading move to web engine
+2012-11-30 00:57:37.594916: ENGINE finished processing player 1's move
+2012-11-30 00:57:37.595206: ENGINE notifying player 2 of last move
+2012-11-30 00:57:37.601262: ENGINE notifying player 1 of last move
+2012-11-30 00:57:37.607028: ENGINE finished with next move
+2012-11-30 00:57:37.607186: ENGINE processing human move # 32
+2012-11-30 00:57:37.607213: ENGINE waiting for human move
+2012-11-30 00:57:41.193390: ENGINE downloaded human move. Player 2 Move: [4,2] -> [4,3]
+2012-11-30 00:57:41.193452: ENGINE finished processing player 2's move
+2012-11-30 00:57:41.193733: ENGINE notifying player 2 of last move
+2012-11-30 00:57:41.199794: ENGINE notifying player 1 of last move
+2012-11-30 00:57:41.199891: ENGINE finished with next move
+2012-11-30 00:57:41.199964: ENGINE processing move # 33
+2012-11-30 00:57:41.200005: ENGINE getting next move from player 1
+2012-11-30 00:57:41.535638: ENGINE validating player 1 move. Player 1 Wall: [3,4] -> [3,6]
+2012-11-30 00:57:41.535718: ENGINE uploading move to web engine
+2012-11-30 00:57:41.598791: ENGINE finished processing player 1's move
+2012-11-30 00:57:41.599060: ENGINE notifying player 2 of last move
+2012-11-30 00:57:41.599384: ENGINE notifying player 1 of last move
+2012-11-30 00:57:41.599479: ENGINE finished with next move
+2012-11-30 00:57:41.599550: ENGINE processing human move # 34
+2012-11-30 00:57:41.599580: ENGINE waiting for human move
+2012-11-30 00:57:44.637918: ENGINE downloaded human move. Player 2 Move: [4,3] -> [3,3]
+2012-11-30 00:57:44.637978: ENGINE finished processing player 2's move
+2012-11-30 00:57:44.638218: ENGINE notifying player 2 of last move
+2012-11-30 00:57:44.644179: ENGINE notifying player 1 of last move
+2012-11-30 00:57:44.644296: ENGINE finished with next move
+2012-11-30 00:57:44.644415: ENGINE processing move # 35
+2012-11-30 00:57:44.644451: ENGINE getting next move from player 1
+2012-11-30 00:57:44.646311: ENGINE validating player 1 move. Player 1 Move: [7,5] -> [7,4]
+2012-11-30 00:57:44.646371: ENGINE uploading move to web engine
+2012-11-30 00:57:44.744307: ENGINE finished processing player 1's move
+2012-11-30 00:57:44.744574: ENGINE notifying player 2 of last move
+2012-11-30 00:57:44.744901: ENGINE notifying player 1 of last move
+2012-11-30 00:57:44.744985: ENGINE finished with next move
+2012-11-30 00:57:44.745059: ENGINE processing human move # 36
+2012-11-30 00:57:44.745090: ENGINE waiting for human move
+2012-11-30 00:57:48.021652: ENGINE downloaded human move. Player 2 Move: [3,3] -> [3,4]
+2012-11-30 00:57:48.021711: ENGINE finished processing player 2's move
+2012-11-30 00:57:48.021992: ENGINE notifying player 2 of last move
+2012-11-30 00:57:48.022320: ENGINE notifying player 1 of last move
+2012-11-30 00:57:48.022424: ENGINE finished with next move
+2012-11-30 00:57:48.022494: ENGINE processing move # 37
+2012-11-30 00:57:48.022534: ENGINE getting next move from player 1
+2012-11-30 00:57:48.024513: ENGINE validating player 1 move. Player 1 Move: [7,4] -> [8,4]
+2012-11-30 00:57:48.024570: ENGINE uploading move to web engine
+2012-11-30 00:57:48.169973: ENGINE finished processing player 1's move
+2012-11-30 00:57:48.170254: ENGINE notifying player 2 of last move
+2012-11-30 00:57:48.170595: ENGINE notifying player 1 of last move
+2012-11-30 00:57:48.176365: ENGINE finished with next move
+2012-11-30 00:57:48.176472: ENGINE processing human move # 38
+2012-11-30 00:57:48.176508: ENGINE waiting for human move
+2012-11-30 00:57:54.354783: ENGINE downloaded human move. Player 2 Move: [3,4] -> [3,5]
+2012-11-30 00:57:54.354861: ENGINE finished processing player 2's move
+2012-11-30 00:57:54.355169: ENGINE notifying player 2 of last move
+2012-11-30 00:57:54.360695: ENGINE notifying player 1 of last move
+2012-11-30 00:57:54.360786: ENGINE finished with next move
+2012-11-30 00:57:54.360857: ENGINE processing move # 39
+2012-11-30 00:57:54.360885: ENGINE getting next move from player 1
+2012-11-30 00:57:54.362607: ENGINE validating player 1 move. Player 1 Move: [8,4] -> [8,3]
+2012-11-30 00:57:54.362661: ENGINE uploading move to web engine
+2012-11-30 00:57:54.507026: ENGINE finished processing player 1's move
+2012-11-30 00:57:54.507395: ENGINE notifying player 2 of last move
+2012-11-30 00:57:54.507754: ENGINE notifying player 1 of last move
+2012-11-30 00:57:54.513566: ENGINE finished with next move
+2012-11-30 00:57:54.513659: ENGINE processing human move # 40
+2012-11-30 00:57:54.513688: ENGINE waiting for human move
+2012-11-30 00:58:01.767036: ENGINE downloaded human move. Player 2 Wall: [8,2] -> [8,4]
+2012-11-30 00:58:01.767095: ENGINE finished processing player 2's move
+2012-11-30 00:58:01.767374: ENGINE notifying player 2 of last move
+2012-11-30 00:58:01.767898: ENGINE notifying player 1 of last move
+2012-11-30 00:58:01.768005: ENGINE finished with next move
+2012-11-30 00:58:01.768084: ENGINE processing move # 41
+2012-11-30 00:58:01.768110: ENGINE getting next move from player 1
+2012-11-30 00:58:01.769767: ENGINE validating player 1 move. Player 1 Move: [8,3] -> [8,2]
+2012-11-30 00:58:01.769821: ENGINE uploading move to web engine
+2012-11-30 00:58:01.868440: ENGINE finished processing player 1's move
+2012-11-30 00:58:01.868730: ENGINE notifying player 2 of last move
+2012-11-30 00:58:01.869052: ENGINE notifying player 1 of last move
+2012-11-30 00:58:01.869181: ENGINE finished with next move
+2012-11-30 00:58:01.869253: ENGINE processing human move # 42
+2012-11-30 00:58:01.869279: ENGINE waiting for human move
+2012-11-30 00:58:11.488206: ENGINE downloaded human move. Player 2 Move: [3,5] -> [3,6]
+2012-11-30 00:58:11.488266: ENGINE finished processing player 2's move
+2012-11-30 00:58:11.488513: ENGINE notifying player 2 of last move
+2012-11-30 00:58:11.488859: ENGINE notifying player 1 of last move
+2012-11-30 00:58:11.488946: ENGINE finished with next move
+2012-11-30 00:58:11.489012: ENGINE processing move # 43
+2012-11-30 00:58:11.489035: ENGINE getting next move from player 1
+2012-11-30 00:58:11.490845: ENGINE validating player 1 move. Player 1 Move: [8,2] -> [8,1]
+2012-11-30 00:58:11.490900: ENGINE uploading move to web engine
+2012-11-30 00:58:11.637905: ENGINE finished processing player 1's move
+2012-11-30 00:58:11.638187: ENGINE notifying player 2 of last move
+2012-11-30 00:58:11.638586: ENGINE notifying player 1 of last move
+2012-11-30 00:58:11.643893: ENGINE finished with next move
+2012-11-30 00:58:11.643999: ENGINE processing human move # 44
+2012-11-30 00:58:11.644029: ENGINE waiting for human move
+2012-11-30 00:58:30.747396: ENGINE downloaded human move. Player 2 Move: [3,6] -> [2,6]
+2012-11-30 00:58:30.747459: ENGINE finished processing player 2's move
+2012-11-30 00:58:30.747702: ENGINE notifying player 2 of last move
+2012-11-30 00:58:30.748056: ENGINE notifying player 1 of last move
+2012-11-30 00:58:30.748145: ENGINE finished with next move
+2012-11-30 00:58:30.748223: ENGINE processing move # 45
+2012-11-30 00:58:30.748248: ENGINE getting next move from player 1
+2012-11-30 00:58:31.058159: ENGINE validating player 1 move. Player 1 Wall: [7,0] -> [7,2]
+2012-11-30 00:58:31.058233: ENGINE uploading move to web engine
+2012-11-30 00:58:31.160558: ENGINE finished processing player 1's move
+2012-11-30 00:58:31.160863: ENGINE notifying player 2 of last move
+2012-11-30 00:58:31.161265: ENGINE notifying player 1 of last move
+2012-11-30 00:58:31.161375: ENGINE finished with next move
+2012-11-30 00:58:31.161445: ENGINE processing human move # 46
+2012-11-30 00:58:31.161475: ENGINE waiting for human move
+2012-11-30 00:58:39.711566: ENGINE downloaded human move. Player 2 Move: [2,6] -> [2,5]
+2012-11-30 00:58:39.711638: ENGINE finished processing player 2's move
+2012-11-30 00:58:39.711935: ENGINE notifying player 2 of last move
+2012-11-30 00:58:39.717963: ENGINE notifying player 1 of last move
+2012-11-30 00:58:39.723763: ENGINE finished with next move
+2012-11-30 00:58:39.723842: ENGINE processing move # 47
+2012-11-30 00:58:39.723867: ENGINE getting next move from player 1
+2012-11-30 00:58:39.725720: ENGINE validating player 1 move. Player 1 Move: [8,1] -> [7,1]
+2012-11-30 00:58:39.725770: ENGINE uploading move to web engine
+2012-11-30 00:58:39.876336: ENGINE finished processing player 1's move
+2012-11-30 00:58:39.876659: ENGINE notifying player 2 of last move
+2012-11-30 00:58:39.877001: ENGINE notifying player 1 of last move
+2012-11-30 00:58:39.877097: ENGINE finished with next move
+2012-11-30 00:58:39.877171: ENGINE processing human move # 48
+2012-11-30 00:58:39.877216: ENGINE waiting for human move
+2012-11-30 00:58:46.712503: ENGINE downloaded human move. Player 2 Move: [2,5] -> [2,4]
+2012-11-30 00:58:46.712558: ENGINE finished processing player 2's move
+2012-11-30 00:58:46.712847: ENGINE notifying player 2 of last move
+2012-11-30 00:58:46.718868: ENGINE notifying player 1 of last move
+2012-11-30 00:58:46.718967: ENGINE finished with next move
+2012-11-30 00:58:46.719042: ENGINE processing move # 49
+2012-11-30 00:58:46.719086: ENGINE getting next move from player 1
+2012-11-30 00:58:46.721053: ENGINE validating player 1 move. Player 1 Move: [7,1] -> [7,2]
+2012-11-30 00:58:46.721115: ENGINE uploading move to web engine
+2012-11-30 00:58:46.894753: ENGINE finished processing player 1's move
+2012-11-30 00:58:46.895132: ENGINE notifying player 2 of last move
+2012-11-30 00:58:46.895446: ENGINE notifying player 1 of last move
+2012-11-30 00:58:46.895535: ENGINE finished with next move
+2012-11-30 00:58:46.895606: ENGINE processing human move # 50
+2012-11-30 00:58:46.895636: ENGINE waiting for human move
+2012-11-30 00:58:50.570385: ENGINE downloaded human move. Player 2 Move: [2,4] -> [2,3]
+2012-11-30 00:58:50.570460: ENGINE finished processing player 2's move
+2012-11-30 00:58:50.570790: ENGINE notifying player 2 of last move
+2012-11-30 00:58:50.571117: ENGINE notifying player 1 of last move
+2012-11-30 00:58:50.571213: ENGINE finished with next move
+2012-11-30 00:58:50.571285: ENGINE processing move # 51
+2012-11-30 00:58:50.571326: ENGINE getting next move from player 1
+2012-11-30 00:58:50.572895: ENGINE validating player 1 move. Player 1 Move: [7,2] -> [6,2]
+2012-11-30 00:58:50.572954: ENGINE uploading move to web engine
+2012-11-30 00:58:50.701140: ENGINE finished processing player 1's move
+2012-11-30 00:58:50.701448: ENGINE notifying player 2 of last move
+2012-11-30 00:58:50.701918: ENGINE notifying player 1 of last move
+2012-11-30 00:58:50.702009: ENGINE finished with next move
+2012-11-30 00:58:50.702094: ENGINE processing human move # 52
+2012-11-30 00:58:50.702124: ENGINE waiting for human move
+2012-11-30 00:58:55.584462: ENGINE downloaded human move. Player 2 Move: [2,3] -> [2,2]
+2012-11-30 00:58:55.584523: ENGINE finished processing player 2's move
+2012-11-30 00:58:55.584810: ENGINE notifying player 2 of last move
+2012-11-30 00:58:55.585218: ENGINE notifying player 1 of last move
+2012-11-30 00:58:55.585346: ENGINE finished with next move
+2012-11-30 00:58:55.585429: ENGINE processing move # 53
+2012-11-30 00:58:55.585466: ENGINE getting next move from player 1
+2012-11-30 00:58:55.587129: ENGINE validating player 1 move. Player 1 Move: [6,2] -> [6,1]
+2012-11-30 00:58:55.587191: ENGINE uploading move to web engine
+2012-11-30 00:58:55.688551: ENGINE finished processing player 1's move
+2012-11-30 00:58:55.688836: ENGINE notifying player 2 of last move
+2012-11-30 00:58:55.689143: ENGINE notifying player 1 of last move
+2012-11-30 00:58:55.689234: ENGINE finished with next move
+2012-11-30 00:58:55.689334: ENGINE processing human move # 54
+2012-11-30 00:58:55.689362: ENGINE waiting for human move
+2012-11-30 00:58:58.898509: ENGINE downloaded human move. Player 2 Move: [2,2] -> [1,2]
+2012-11-30 00:58:58.898570: ENGINE finished processing player 2's move
+2012-11-30 00:58:58.898808: ENGINE notifying player 2 of last move
+2012-11-30 00:58:58.899101: ENGINE notifying player 1 of last move
+2012-11-30 00:58:58.899183: ENGINE finished with next move
+2012-11-30 00:58:58.899248: ENGINE processing move # 55
+2012-11-30 00:58:58.899272: ENGINE getting next move from player 1
+2012-11-30 00:58:58.900765: ENGINE validating player 1 move. Player 1 Move: [6,1] -> [5,1]
+2012-11-30 00:58:58.900822: ENGINE uploading move to web engine
+2012-11-30 00:58:59.021473: ENGINE finished processing player 1's move
+2012-11-30 00:58:59.021750: ENGINE notifying player 2 of last move
+2012-11-30 00:58:59.027488: ENGINE notifying player 1 of last move
+2012-11-30 00:58:59.033288: ENGINE finished with next move
+2012-11-30 00:58:59.033404: ENGINE processing human move # 56
+2012-11-30 00:58:59.033442: ENGINE waiting for human move
+2012-11-30 00:59:04.030203: ENGINE downloaded human move. Player 2 Move: [1,2] -> [1,1]
+2012-11-30 00:59:04.030265: ENGINE finished processing player 2's move
+2012-11-30 00:59:04.030497: ENGINE notifying player 2 of last move
+2012-11-30 00:59:04.030889: ENGINE notifying player 1 of last move
+2012-11-30 00:59:04.030977: ENGINE finished with next move
+2012-11-30 00:59:04.031051: ENGINE processing move # 57
+2012-11-30 00:59:04.031077: ENGINE getting next move from player 1
+2012-11-30 00:59:04.032473: ENGINE validating player 1 move. Player 1 Move: [5,1] -> [4,1]
+2012-11-30 00:59:04.032530: ENGINE uploading move to web engine
+2012-11-30 00:59:04.132259: ENGINE finished processing player 1's move
+2012-11-30 00:59:04.132531: ENGINE notifying player 2 of last move
+2012-11-30 00:59:04.132840: ENGINE notifying player 1 of last move
+2012-11-30 00:59:04.132930: ENGINE finished with next move
+2012-11-30 00:59:04.132998: ENGINE processing human move # 58
+2012-11-30 00:59:04.133028: ENGINE waiting for human move
+2012-11-30 00:59:07.485679: ENGINE downloaded human move. Player 2 Move: [1,1] -> [2,1]
+2012-11-30 00:59:07.485736: ENGINE finished processing player 2's move
+2012-11-30 00:59:07.486000: ENGINE notifying player 2 of last move
+2012-11-30 00:59:07.492032: ENGINE notifying player 1 of last move
+2012-11-30 00:59:07.492166: ENGINE finished with next move
+2012-11-30 00:59:07.492248: ENGINE processing move # 59
+2012-11-30 00:59:07.492274: ENGINE getting next move from player 1
+2012-11-30 00:59:07.493478: ENGINE validating player 1 move. Player 1 Move: [4,1] -> [3,1]
+2012-11-30 00:59:07.493534: ENGINE uploading move to web engine
+2012-11-30 00:59:07.586484: ENGINE finished processing player 1's move
+2012-11-30 00:59:07.586756: ENGINE notifying player 2 of last move
+2012-11-30 00:59:07.592764: ENGINE notifying player 1 of last move
+2012-11-30 00:59:07.598559: ENGINE finished with next move
+2012-11-30 00:59:07.598649: ENGINE processing human move # 60
+2012-11-30 00:59:07.598679: ENGINE waiting for human move
+2012-11-30 00:59:12.013945: ENGINE downloaded human move. Player 2 Move: [2,1] -> [4,1]
+2012-11-30 00:59:12.014014: ENGINE finished processing player 2's move
+2012-11-30 00:59:12.014288: ENGINE notifying player 2 of last move
+2012-11-30 00:59:12.019804: ENGINE notifying player 1 of last move
+2012-11-30 00:59:12.019943: ENGINE finished with next move
+2012-11-30 00:59:12.020026: ENGINE processing move # 61
+2012-11-30 00:59:12.020050: ENGINE getting next move from player 1
+2012-11-30 00:59:12.020968: ENGINE validating player 1 move. Player 1 Move: [3,1] -> [2,1]
+2012-11-30 00:59:12.021022: ENGINE uploading move to web engine
+2012-11-30 00:59:12.165338: ENGINE finished processing player 1's move
+2012-11-30 00:59:12.165612: ENGINE notifying player 2 of last move
+2012-11-30 00:59:12.166117: ENGINE notifying player 1 of last move
+2012-11-30 00:59:12.166204: ENGINE finished with next move
+2012-11-30 00:59:12.166277: ENGINE processing human move # 62
+2012-11-30 00:59:12.166308: ENGINE waiting for human move
+2012-11-30 00:59:17.683501: ENGINE downloaded human move. Player 2 Move: [4,1] -> [5,1]
+2012-11-30 00:59:17.683561: ENGINE finished processing player 2's move
+2012-11-30 00:59:17.683876: ENGINE notifying player 2 of last move
+2012-11-30 00:59:17.689965: ENGINE notifying player 1 of last move
+2012-11-30 00:59:17.690127: ENGINE finished with next move
+2012-11-30 00:59:17.690208: ENGINE processing move # 63
+2012-11-30 00:59:17.690231: ENGINE getting next move from player 1
+2012-11-30 00:59:17.690971: ENGINE validating player 1 move. Player 1 Move: [2,1] -> [1,1]
+2012-11-30 00:59:17.691029: ENGINE uploading move to web engine
+2012-11-30 00:59:17.806648: ENGINE finished processing player 1's move
+2012-11-30 00:59:17.806951: ENGINE notifying player 2 of last move
+2012-11-30 00:59:17.812569: ENGINE notifying player 1 of last move
+2012-11-30 00:59:17.818370: ENGINE finished with next move
+2012-11-30 00:59:17.818464: ENGINE processing human move # 64
+2012-11-30 00:59:17.818492: ENGINE waiting for human move
+2012-11-30 00:59:21.617709: ENGINE downloaded human move. Player 2 Move: [5,1] -> [6,1]
+2012-11-30 00:59:21.617820: ENGINE finished processing player 2's move
+2012-11-30 00:59:21.618086: ENGINE notifying player 2 of last move
+2012-11-30 00:59:21.618492: ENGINE notifying player 1 of last move
+2012-11-30 00:59:21.618588: ENGINE finished with next move
+2012-11-30 00:59:21.618659: ENGINE processing move # 65
+2012-11-30 00:59:21.618702: ENGINE getting next move from player 1
+2012-11-30 00:59:21.619346: ENGINE validating player 1 move. Player 1 Move: [1,1] -> [1,2]
+2012-11-30 00:59:21.619407: ENGINE uploading move to web engine
+2012-11-30 00:59:21.729895: ENGINE finished processing player 1's move
+2012-11-30 00:59:21.730183: ENGINE notifying player 2 of last move
+2012-11-30 00:59:21.730598: ENGINE notifying player 1 of last move
+2012-11-30 00:59:21.730702: ENGINE finished with next move
+2012-11-30 00:59:21.730808: ENGINE processing human move # 66
+2012-11-30 00:59:21.730850: ENGINE waiting for human move
+2012-11-30 00:59:26.658422: ENGINE downloaded human move. Player 2 Wall: [1,2] -> [1,4]
+2012-11-30 00:59:26.658482: ENGINE finished processing player 2's move
+2012-11-30 00:59:26.658725: ENGINE notifying player 2 of last move
+2012-11-30 00:59:26.659066: ENGINE notifying player 1 of last move
+2012-11-30 00:59:26.659167: ENGINE finished with next move
+2012-11-30 00:59:26.659238: ENGINE processing move # 67
+2012-11-30 00:59:26.659264: ENGINE getting next move from player 1
+2012-11-30 00:59:26.660037: ENGINE validating player 1 move. Player 1 Move: [1,2] -> [1,3]
+2012-11-30 00:59:26.660090: ENGINE uploading move to web engine
+2012-11-30 00:59:26.787926: ENGINE finished processing player 1's move
+2012-11-30 00:59:26.788195: ENGINE notifying player 2 of last move
+2012-11-30 00:59:26.788541: ENGINE notifying player 1 of last move
+2012-11-30 00:59:26.788648: ENGINE finished with next move
+2012-11-30 00:59:26.788741: ENGINE processing human move # 68
+2012-11-30 00:59:26.788831: ENGINE waiting for human move
+2012-11-30 00:59:30.486000: ENGINE downloaded human move. Player 2 Move: [6,1] -> [6,2]
+2012-11-30 00:59:30.486062: ENGINE finished processing player 2's move
+2012-11-30 00:59:30.486353: ENGINE notifying player 2 of last move
+2012-11-30 00:59:30.492291: ENGINE notifying player 1 of last move
+2012-11-30 00:59:30.492452: ENGINE finished with next move
+2012-11-30 00:59:30.492535: ENGINE processing move # 69
+2012-11-30 00:59:30.492558: ENGINE getting next move from player 1
+2012-11-30 00:59:30.493197: ENGINE validating player 1 move. Player 1 Move: [1,3] -> [1,4]
+2012-11-30 00:59:30.493252: ENGINE uploading move to web engine
+2012-11-30 00:59:30.618297: ENGINE finished processing player 1's move
+2012-11-30 00:59:30.618619: ENGINE notifying player 2 of last move
+2012-11-30 00:59:30.624225: ENGINE notifying player 1 of last move
+2012-11-30 00:59:30.630091: ENGINE finished with next move
+2012-11-30 00:59:30.630200: ENGINE processing human move # 70
+2012-11-30 00:59:30.630229: ENGINE waiting for human move
+2012-11-30 00:59:33.684815: ENGINE downloaded human move. Player 2 Wall: [1,4] -> [1,6]
+2012-11-30 00:59:33.684876: ENGINE finished processing player 2's move
+2012-11-30 00:59:33.685168: ENGINE notifying player 2 of last move
+2012-11-30 00:59:33.690763: ENGINE notifying player 1 of last move
+2012-11-30 00:59:33.696526: ENGINE finished with next move
+2012-11-30 00:59:33.696609: ENGINE processing move # 71
+2012-11-30 00:59:33.696651: ENGINE getting next move from player 1
+2012-11-30 00:59:33.697321: ENGINE validating player 1 move. Player 1 Move: [1,4] -> [1,5]
+2012-11-30 00:59:33.697372: ENGINE uploading move to web engine
+2012-11-30 00:59:33.867038: ENGINE finished processing player 1's move
+2012-11-30 00:59:33.867305: ENGINE notifying player 2 of last move
+2012-11-30 00:59:33.867611: ENGINE notifying player 1 of last move
+2012-11-30 00:59:33.867704: ENGINE finished with next move
+2012-11-30 00:59:33.867786: ENGINE processing human move # 72
+2012-11-30 00:59:33.867826: ENGINE waiting for human move
+2012-11-30 00:59:36.945498: ENGINE downloaded human move. Player 2 Move: [6,2] -> [7,2]
+2012-11-30 00:59:36.945562: ENGINE finished processing player 2's move
+2012-11-30 00:59:36.945895: ENGINE notifying player 2 of last move
+2012-11-30 00:59:36.946259: ENGINE notifying player 1 of last move
+2012-11-30 00:59:36.946363: ENGINE finished with next move
+2012-11-30 00:59:36.946466: ENGINE processing move # 73
+2012-11-30 00:59:36.946494: ENGINE getting next move from player 1
+2012-11-30 00:59:36.947124: ENGINE validating player 1 move. Player 1 Move: [1,5] -> [1,6]
+2012-11-30 00:59:36.947181: ENGINE uploading move to web engine
+2012-11-30 00:59:37.100090: ENGINE finished processing player 1's move
+2012-11-30 00:59:37.100352: ENGINE notifying player 2 of last move
+2012-11-30 00:59:37.100647: ENGINE notifying player 1 of last move
+2012-11-30 00:59:37.100730: ENGINE finished with next move
+2012-11-30 00:59:37.100799: ENGINE processing human move # 74
+2012-11-30 00:59:37.100831: ENGINE waiting for human move
+2012-11-30 00:59:42.104035: ENGINE downloaded human move. Player 2 Wall: [1,6] -> [1,8]
+2012-11-30 00:59:42.104101: ENGINE finished processing player 2's move
+2012-11-30 00:59:42.104385: ENGINE notifying player 2 of last move
+2012-11-30 00:59:42.110434: ENGINE notifying player 1 of last move
+2012-11-30 00:59:42.110545: ENGINE finished with next move
+2012-11-30 00:59:42.110623: ENGINE processing move # 75
+2012-11-30 00:59:42.110650: ENGINE getting next move from player 1
+2012-11-30 00:59:42.111390: ENGINE validating player 1 move. Player 1 Move: [1,6] -> [1,7]
+2012-11-30 00:59:42.111445: ENGINE uploading move to web engine
+2012-11-30 00:59:42.234392: ENGINE finished processing player 1's move
+2012-11-30 00:59:42.234693: ENGINE notifying player 2 of last move
+2012-11-30 00:59:42.240807: ENGINE notifying player 1 of last move
+2012-11-30 00:59:42.240915: ENGINE finished with next move
+2012-11-30 00:59:42.240988: ENGINE processing human move # 76
+2012-11-30 00:59:42.241017: ENGINE waiting for human move
+2012-11-30 00:59:45.481303: ENGINE downloaded human move. Player 2 Move: [7,2] -> [7,1]
+2012-11-30 00:59:45.481365: ENGINE finished processing player 2's move
+2012-11-30 00:59:45.481651: ENGINE notifying player 2 of last move
+2012-11-30 00:59:45.481979: ENGINE notifying player 1 of last move
+2012-11-30 00:59:45.482072: ENGINE finished with next move
+2012-11-30 00:59:45.482152: ENGINE processing move # 77
+2012-11-30 00:59:45.482185: ENGINE getting next move from player 1
+2012-11-30 00:59:45.482769: ENGINE validating player 1 move. Player 1 Move: [1,7] -> [1,8]
+2012-11-30 00:59:45.482821: ENGINE uploading move to web engine
+2012-11-30 00:59:45.646501: ENGINE finished processing player 1's move
+2012-11-30 00:59:45.646764: ENGINE notifying player 2 of last move
+2012-11-30 00:59:45.647082: ENGINE notifying player 1 of last move
+2012-11-30 00:59:45.647169: ENGINE finished with next move
+2012-11-30 00:59:45.647244: ENGINE processing human move # 78
+2012-11-30 00:59:45.647276: ENGINE waiting for human move
+2012-11-30 00:59:50.650654: ENGINE downloaded human move. Player 2 Move: [7,1] -> [8,1]
+2012-11-30 00:59:50.650712: ENGINE finished processing player 2's move
+2012-11-30 00:59:50.651005: ENGINE notifying player 2 of last move
+2012-11-30 00:59:50.651371: ENGINE notifying player 1 of last move
+2012-11-30 00:59:50.651458: ENGINE finished with next move
+2012-11-30 00:59:50.651507: ENGINE shutting down

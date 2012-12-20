@@ -1,0 +1,18 @@
+2012-12-09 21:13:24.842246: ENGINE starting
+2012-12-09 21:13:24.842571: ENGINE loading STUDENT ENGINE part 1
+2012-12-09 21:13:24.848619: ENGINE loaded player module: OKComputer as player 1
+2012-12-09 21:13:24.848664: QUORIDOR ENGINE CLIENT 1.0.3 by Adam Oest initializing
+2012-12-09 21:13:24.973067: ENGINE calling STUDENT ENGINE init
+2012-12-09 21:13:24.973150: STUDENT ENGINE init call successfully returned
+2012-12-09 21:13:24.973191: ENGINE calling init() for player 1
+2012-12-09 21:13:24.973572: OKComputer initialized as player 1
+2012-12-09 21:13:24.973626: MODEL: starting path queries
+2012-12-09 21:13:24.975441: ENGINE called STUDENT ENGINE get_shortest_path
+2012-12-09 21:13:24.975465: ERROR: list index out of range
+2012-12-09 21:13:24.975887: TRACE: 
+Traceback (most recent call last):
+  File "C:\Users\Adam\Desktop\a\Quoridor_Client_2121\Releases\1.0.3\Python 3.3\Model\__init__.py", line 560, in studentEngineCallNoLog
+  File "/Users/robert/Documents/eclipse-workspace/CSProject-Quoridor/StudentEngines/rgh7614/__init__.py", line 160, in get_shortest_path
+    destination = engineData.board[r2][c2]
+IndexError: list index out of range
+

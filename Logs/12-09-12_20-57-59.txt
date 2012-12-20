@@ -1,0 +1,40 @@
+2012-12-09 20:57:59.340025: ENGINE starting
+2012-12-09 20:57:59.342206: ENGINE loading STUDENT ENGINE part 1
+2012-12-09 20:57:59.350256: ENGINE loaded player module: OKComputer as player 1
+2012-12-09 20:57:59.350299: QUORIDOR ENGINE CLIENT 1.0.3 by Adam Oest initializing
+2012-12-09 20:57:59.483424: ENGINE calling STUDENT ENGINE init
+2012-12-09 20:57:59.483495: STUDENT ENGINE init call successfully returned
+2012-12-09 20:57:59.483534: ENGINE calling init() for player 1
+2012-12-09 20:57:59.483906: OKComputer initialized as player 1
+2012-12-09 20:57:59.483972: ENGINE processing move # 1
+2012-12-09 20:57:59.483995: ENGINE getting move for player 1 from PRE_MOVE list 
+2012-12-09 20:57:59.484023: ENGINE validating player 1 move. Player 1 Wall: [0,1] -> [2,1]
+2012-12-09 20:57:59.484061: ENGINE uploading move to web engine
+2012-12-09 20:57:59.586748: ENGINE calling STUDENT ENGINE last_move
+2012-12-09 20:57:59.586814: STUDENT ENGINE last_move call successfully returned
+2012-12-09 20:57:59.586842: ENGINE finished processing player 1's move
+2012-12-09 20:57:59.587204: ENGINE notifying player 1 of last move
+2012-12-09 20:57:59.587451: ENGINE finished with next move
+2012-12-09 20:57:59.587535: ENGINE processing move # 2
+2012-12-09 20:57:59.587559: ENGINE getting move for player 1 from PRE_MOVE list 
+2012-12-09 20:57:59.587586: ENGINE validating player 1 move. Player 1 Wall: [1,2] -> [1,4]
+2012-12-09 20:57:59.587627: ENGINE uploading move to web engine
+2012-12-09 20:57:59.690668: ENGINE calling STUDENT ENGINE last_move
+2012-12-09 20:57:59.690728: ERROR: 'EngineData' object does not support indexing
+2012-12-09 20:57:59.691142: TRACE: 
+Traceback (most recent call last):
+  File "C:\Users\Adam\Desktop\a\Quoridor_Client_2121\Releases\1.0.3\Python 3.3\Model\__init__.py", line 546, in studentEngineCall
+  File "/Users/robert/Documents/eclipse-workspace/CSProject-Quoridor/StudentEngines/rgh7614/__init__.py", line 82, in last_move
+    engineData[playerMove.r1][playerMove.c1].top = False
+TypeError: 'EngineData' object does not support indexing
+
+2012-12-09 20:57:59.691190: ERROR: 'ENGINE exiting due to STUDENT ENGINE exception'
+2012-12-09 20:57:59.691269: TRACE: 
+Traceback (most recent call last):
+  File "C:\Users\Adam\Desktop\a\Quoridor_Client_2121\Releases\1.0.3\Python 3.3\Engine\controller.py", line 255, in nextTurn
+  File "C:\Users\Adam\Desktop\a\Quoridor_Client_2121\Releases\1.0.3\Python 3.3\Model\__init__.py", line 553, in studentEngineCall
+Engine.security.GameException: 'ENGINE exiting due to STUDENT ENGINE exception'
+
+2012-12-09 20:57:59.790198: 'ENGINE exiting due to STUDENT ENGINE exception'
+2012-12-09 20:57:59.790338: ENGINE finished with next move
+2012-12-09 20:57:59.790385: ENGINE shutting down
