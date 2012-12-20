@@ -6,7 +6,7 @@
 # Remove the "GetAnAPIKey" text below and replace it with the key you
 # have copied off the web page.
 
-API_KEY 282ea329acc12391d03
+API_KEY APIKEYHERE
 
 ########################### MAIN GAME CONFIG ###############################
 
