@@ -1,6 +1,6 @@
 """
-This is the interface the player uses to make their moves and communicate
-with the engine.   Nothing in this file should be modified by you.
+This is the interface the player uses to specify its moves and communicate
+with the engine. NOTE: Nothing in this file should be modified by students.
 
 Author: Adam Oest (amo9149@rit.edu)
 """
@@ -17,6 +17,32 @@ class PlayerMove():
 		two pairs of coordinates for the wall endpoints, and piece moves,
 		which use the first coordinate pair for a verification of the
 		current position and the second coordinate pair for the new position.
+		
+		The Coordinate System
+		
+		A Quoridor board is a 9-by-9 grid of cells.
+		"Cells" are the spots where player pieces can be placed.
+		Our numbering conventions for cell positions are as follows.
+		The top row is row 0; the bottom row is row 8.
+		The left column is column 0; the rightmost column is column 8.
+		Examples
+			The top right corner cell is row 0, column 8.
+			The starting position of the player at the bottom of the board
+			  is row 8, column 4.
+
+		For wall placement, you must identify locations _between_
+		the cells. These locations are numbered 0 through 9.
+		The board position for identifying the end point of a wall
+		is therefore the same as that of the cell below it to its right,
+		if a cell exists there.
+		Looking at it the opposite way, the coordinates of a cell are
+		the same as the coordinates of its upper left-hand corner.
+		
+		Player identification
+		
+		Player IDs start with 1 (not 0).
+		For example, in a four-player game the player IDs are 1,2,3,4.
+		In part 1, all PlayerMove instances should have playerId = 1.
     """
 	__slots__ = ('playerId','move','start','end','r1','c1','r2','c2')
 	

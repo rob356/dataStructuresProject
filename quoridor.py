@@ -8,4 +8,4 @@ Author: Adam Oest (amo9149@rit.edu)
 from Engine.game import quoridor
     
 if __name__ == "__main__":
-        quoridor()
+    quoridor()
