@@ -77,20 +77,26 @@ def last_move(engineData, playerMove):
     # Update your engineData board state here, incorporating the last move.
     
     #Assuming all moves are walls for part 1
-    if playerMove.r1 == playerMove.r2:
-        if playerMove.r1 != 9:
-            engineData.board[playerMove.r1][playerMove.c1].top = False
-            engineData.board[playerMove.r2][playerMove.c2 - 1].top = False
-        if playerMove.r1 != 0:
-            engineData.board[playerMove.r1 - 1][playerMove.c1].down = False
-            engineData.board[playerMove.r2 - 1][playerMove.c2 - 1].down = False
+    if not playerMove.move:
+        if playerMove.r1 == playerMove.r2:
+            if playerMove.r1 != 9:
+                engineData.board[playerMove.r1][playerMove.c1].top = False
+                engineData.board[playerMove.r2][playerMove.c2 - 1].top = False
+            if playerMove.r1 != 0:
+                engineData.board[playerMove.r1 - 1][playerMove.c1].down = False
+                engineData.board[playerMove.r2 - 1][playerMove.c2 - 1].down = False
+            engineData.walls.append([playerMove.r1,playerMove.c2 - 1])
+        else:
+            if playerMove.c1 != 9:
+                engineData.board[playerMove.r1][playerMove.c1].left = False
+                engineData.board[playerMove.r1 + 1][playerMove.c1].left = False
+            if playerMove.c1 != 0:
+                engineData.board[playerMove.r1][playerMove.c1 - 1].right = False
+                engineData.board[playerMove.r1 + 1][playerMove.c1 - 1].right = False
+            engineData.walls.append([playerMove.r2 - 1,playerMove.c1])
+                
     else:
-        if playerMove.c1 != 9:
-            engineData.board[playerMove.r1][playerMove.c1].left = False
-            engineData.board[playerMove.r1 - 1][playerMove.c1].left = False
-        if playerMove.c1 != 0:
-            engineData.board[playerMove.r1][playerMove.c1 - 1].right = False
-            engineData.board[playerMove.r1 - 1][playerMove.c1 - 1].right = False
+        engineData.players[playerMove.playerId - 1].pos = [playerMove.r2,playerMove.c2]
 
     return engineData
 
@@ -127,7 +133,7 @@ def get_neighbors(engineData, r, c):
     
     return neighbors
 
-def get_shortest_path(engineData, r1, c1, r2, c2):
+def get_shortest_path(engineData, r1, c1, destinations):
     """
         Part 1
     
@@ -155,7 +161,7 @@ def get_shortest_path(engineData, r1, c1, r2, c2):
     
     # Replace the line below with your computations.
     source = engineData.board[r1][c1]
-    destination = engineData.board[r2][c2]
+    #destination = engineData.board[r2][c2]
     # 'prime' the dispenser with the source 
     dispenser = Queue()
     enqueue(source, dispenser)
@@ -169,7 +175,7 @@ def get_shortest_path(engineData, r1, c1, r2, c2):
     while not emptyQueue(dispenser):
         current = front(dispenser)
         dequeue(dispenser)
-        if current == destination:
+        if current in destinations:
             break
         # loop over all neighbors of current
         neighbors = []
@@ -186,8 +192,9 @@ def get_shortest_path(engineData, r1, c1, r2, c2):
     # construct the path using a stack and traversing from the destination
     # node back to the source node using Node's previous
     stack = Stack()
-    if destination in predecessors:
-        tmp = destination
+    destination = [i for i in destinations if i in predecessors]
+    if destination != []:
+        tmp = destination[0]
         while tmp != source:
             push(tmp, stack)
             tmp = predecessors[tmp]
@@ -221,8 +228,46 @@ def validate_move(engineData, playerMove):
         Returns: a bool representing whether or not the given move is valid
     """
 
-    # Replace the line below with your computations.
-    return False
+    if not playerMove.move:
+        if engineData.players[playerMove.playerId - 1].walls <= 0:
+            engineData.logger.error("No walls left!")
+            return False
+        if ((playerMove.r1 - playerMove.r2 == 0) and (playerMove.c2 - playerMove.c1 != 2)) or ((playerMove.c1 - playerMove.c2 == 0) and (playerMove.r2 - playerMove.r1 != 2)):
+            engineData.logger.error("Wall was impossible")
+            return False
+        if playerMove.r1 < 0 or playerMove.r2 <= 0 or playerMove.r1 >= 9 or playerMove.r2 > 9 or playerMove.c1 < 0 or playerMove.c2 <= 0 or playerMove.c1 >= 9 or playerMove.c2 > 9:
+            engineData.logger.error("Wall is outside board")
+            return False
+        if playerMove.r1 == playerMove.r2:
+            if [playerMove.r1,playerMove.c2 - 1] in engineData.walls:
+                engineData.logger.error("Wall intersects another wall")
+                return False
+        if playerMove.c1 == playerMove.c2:
+            if [playerMove.r2 - 1,playerMove.c1] in engineData.walls:
+                engineData.logger.error("Wall intersects another wall")
+                return False
+        destinations = []
+        for col in range(0,9):
+            destinations.append(engineData.board[0][col])
+        if get_shortest_path(engineData,engineData.players[0].pos[0],engineData.players[0].pos[1],destinations) == []:
+            engineData.logger.error("Wall blocks player path")
+            return False
+        
+    else:
+        if playerMove.r1 != engineData.players[0].pos[0] or playerMove.c1 != engineData.players[0].pos[1]:
+            engineData.logger.error("Initial position is not corrent")
+            return False
+        if playerMove.r2 < 0 or playerMove.r2 >= 9 or playerMove.c2 < 0 or playerMove.c2 >= 9:
+            engineData.logger.error("Player cannot move outside board")
+            return False
+        neighbors = get_neighbors(engineData,playerMove.r1,playerMove.c1)
+        if [playerMove.r2,playerMove.c2] not in neighbors:
+            print(neighbors)
+            print(str(engineData.board[playerMove.r1][playerMove.c1]))
+            engineData.logger.error("That position does not connect to the initial")
+            return False
+    
+    return True
 
 def initialize_player(engineData, playerNum):
     """

@@ -17,7 +17,7 @@ class BoardSquare:
     
     c: The column the square is in.
     """
-    __slots__=('player','top','left','right','down','r','c')
+    __slots__=('top','left','right','down','r','c')
     
     def __init__(self,r,c):
         """
@@ -25,7 +25,6 @@ class BoardSquare:
         
         Takes the square's row(r) and column(c) as input
         """
-        self.player=0
         self.top=True
         self.left=True
         self.right=True
@@ -38,4 +37,11 @@ class BoardSquare:
         Returns the string representation of the square.
         Really just prints out every variable.
         """
-        return "| Player="+str(self.player)+",Top="+str(self.top)+",Left="+str(self.left)+",Right="+str(self.right)+",Down="+str(self.down)+",r="+str(self.r)+",c="+str(self.c)+" "
+        return "| Top="+str(self.top)+",Left="+str(self.left)+",Right="+str(self.right)+",Down="+str(self.down)+",r="+str(self.r)+",c="+str(self.c)+" "
+    
+class PlayerBoard:
+    __slots__=('pos','walls')
+    
+    def __init__(self,pos,walls):
+        self.pos = pos
+        self.walls = walls

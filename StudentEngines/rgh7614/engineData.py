@@ -7,7 +7,7 @@ Author: Adam Oest (amo9149@rit.edu)
 Author: Robert Holt (rgh7614@rit.edu)
 """
 
-from .board import BoardSquare
+from .board import BoardSquare,PlayerBoard
 
 class EngineData(object):
     """The EngineData Class
@@ -28,7 +28,7 @@ class EngineData(object):
     """
     
     # Add other slots as needed
-    __slots__ = ('logger', 'config', 'model', 'board')
+    __slots__ = ('logger', 'config', 'model', 'board', 'walls', 'players')
     
     def __init__(self, logger, config, model):
         """
@@ -41,6 +41,7 @@ class EngineData(object):
         self.logger = logger
         self.config = config
         self.model = model
+        self.walls = []
         
         # initialize any other slots you require here
         
@@ -62,6 +63,11 @@ class EngineData(object):
                     newSquare.right = False
                 rowData.append(newSquare)
             boardData.append(rowData)
+            
+        self.players = []
+        walls = 20 #FIX ME LATER
+        for home in model.playerHomes:
+            self.players.append(PlayerBoard(home,walls))
             
         self.board = boardData
         

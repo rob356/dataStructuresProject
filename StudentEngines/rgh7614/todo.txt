@@ -1,0 +1,4 @@
+DONE1. Modify engineData __init__ to store player initial positions
+DONE2. Modify last_move to store player positions (for now it assumes they are valid)
+DONE3. Modify last_move to store wall locations
+4. Implement validate_move to validate walls and player moves
