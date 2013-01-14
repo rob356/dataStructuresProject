@@ -85,7 +85,7 @@ def last_move(engineData, playerMove):
             if playerMove.r1 != 0:
                 engineData.board[playerMove.r1 - 1][playerMove.c1].down = False
                 engineData.board[playerMove.r2 - 1][playerMove.c2 - 1].down = False
-            engineData.walls.append([playerMove.r1,playerMove.c2 - 1])
+            engineData.wallsH.append([playerMove.r1,playerMove.c2 - 1])
         else:
             if playerMove.c1 != 9:
                 engineData.board[playerMove.r1][playerMove.c1].left = False
@@ -93,7 +93,7 @@ def last_move(engineData, playerMove):
             if playerMove.c1 != 0:
                 engineData.board[playerMove.r1][playerMove.c1 - 1].right = False
                 engineData.board[playerMove.r1 + 1][playerMove.c1 - 1].right = False
-            engineData.walls.append([playerMove.r2 - 1,playerMove.c1])
+            engineData.wallsV.append([playerMove.r2 - 1,playerMove.c1])
                 
     else:
         engineData.players[playerMove.playerId - 1].pos = [playerMove.r2,playerMove.c2]
@@ -230,22 +230,30 @@ def validate_move(engineData, playerMove):
 
     if not playerMove.move:
         if engineData.players[playerMove.playerId - 1].walls <= 0:
-            engineData.logger.error("No walls left!")
+            engineData.logger.error("No walls remaining for player " + str(playerMove.playerId))
             return False
         if ((playerMove.r1 - playerMove.r2 == 0) and (playerMove.c2 - playerMove.c1 != 2)) or ((playerMove.c1 - playerMove.c2 == 0) and (playerMove.r2 - playerMove.r1 != 2)):
-            engineData.logger.error("Wall was impossible")
+            engineData.logger.error("["+playerMove.r1+","+playerMove.c1+"]->["+playerMove.r2+","+playerMove.c2+"] is not a valid wall placement")
             return False
         if playerMove.r1 < 0 or playerMove.r2 <= 0 or playerMove.r1 >= 9 or playerMove.r2 > 9 or playerMove.c1 < 0 or playerMove.c2 <= 0 or playerMove.c1 >= 9 or playerMove.c2 > 9:
-            engineData.logger.error("Wall is outside board")
+            engineData.logger.error("Wall ["+playerMove.r1+","+playerMove.c1+"]->["+playerMove.r2+","+playerMove.c2+"] is outside the board")
             return False
         if playerMove.r1 == playerMove.r2:
-            if [playerMove.r1,playerMove.c2 - 1] in engineData.walls:
+            if [playerMove.r1,playerMove.c2 - 1] in engineData.wallsH or [playerMove.r1,playerMove.c2 - 1] in engineData.wallsV:
                 engineData.logger.error("Wall intersects another wall")
                 return False
+            else:
+                if [playerMove.r1,playerMove.c2] in engineData.wallsH or [playerMove.r1,playerMove.c1] in engineData.wallsH:
+                    engineData.logger.error("Wall intersects another wall")
+                    return False
         if playerMove.c1 == playerMove.c2:
-            if [playerMove.r2 - 1,playerMove.c1] in engineData.walls:
+            if [playerMove.r2 - 1,playerMove.c1] in engineData.wallsH or [playerMove.r2 - 1,playerMove.c1] in engineData.wallsV:
                 engineData.logger.error("Wall intersects another wall")
                 return False
+            else:
+                if [playerMove.r1,playerMove.c1] in engineData.wallsV or [playerMove.r2,playerMove.c2] in engineData.wallsV:
+                    engineData.logger.error("Wall intersects another wall")
+                    return False
         destinations = []
         for col in range(0,9):
             destinations.append(engineData.board[0][col])
@@ -255,7 +263,7 @@ def validate_move(engineData, playerMove):
         
     else:
         if playerMove.r1 != engineData.players[0].pos[0] or playerMove.c1 != engineData.players[0].pos[1]:
-            engineData.logger.error("Initial position is not corrent")
+            engineData.logger.error("Initial position is not correct")
             return False
         if playerMove.r2 < 0 or playerMove.r2 >= 9 or playerMove.c2 < 0 or playerMove.c2 >= 9:
             engineData.logger.error("Player cannot move outside board")
@@ -264,7 +272,7 @@ def validate_move(engineData, playerMove):
         if [playerMove.r2,playerMove.c2] not in neighbors:
             print(neighbors)
             print(str(engineData.board[playerMove.r1][playerMove.c1]))
-            engineData.logger.error("That position does not connect to the initial")
+            engineData.logger.error("["+playerMove.r2+","+playerMove.c2+"] does not connect to ["+playerMove.r1+","+playerMove.c1+"]")
             return False
     
     return True

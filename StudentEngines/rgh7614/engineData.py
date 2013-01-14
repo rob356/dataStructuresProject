@@ -28,7 +28,7 @@ class EngineData(object):
     """
     
     # Add other slots as needed
-    __slots__ = ('logger', 'config', 'model', 'board', 'walls', 'players')
+    __slots__ = ('logger', 'config', 'model', 'board', 'wallsH', 'wallsV', 'players')
     
     def __init__(self, logger, config, model):
         """
@@ -41,7 +41,8 @@ class EngineData(object):
         self.logger = logger
         self.config = config
         self.model = model
-        self.walls = []
+        self.wallsH = []
+        self.wallsV = []
         
         # initialize any other slots you require here
         
