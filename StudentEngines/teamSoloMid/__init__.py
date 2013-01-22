@@ -270,8 +270,6 @@ def validate_move(engineData, playerMove):
             return False
         neighbors = get_neighbors(engineData,playerMove.r1,playerMove.c1)
         if [playerMove.r2,playerMove.c2] not in neighbors:
-            print(neighbors)
-            print(str(engineData.board[playerMove.r1][playerMove.c1]))
             engineData.logger.error("["+str(playerMove.r2)+","+str(playerMove.c2)+"] does not connect to ["+str(playerMove.r1)+","+str(playerMove.c1)+"]")
             return False
     
