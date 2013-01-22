@@ -233,10 +233,10 @@ def validate_move(engineData, playerMove):
             engineData.logger.error("No walls remaining for player " + str(playerMove.playerId))
             return False
         if ((playerMove.r1 - playerMove.r2 == 0) and (playerMove.c2 - playerMove.c1 != 2)) or ((playerMove.c1 - playerMove.c2 == 0) and (playerMove.r2 - playerMove.r1 != 2)):
-            engineData.logger.error("["+playerMove.r1+","+playerMove.c1+"]->["+playerMove.r2+","+playerMove.c2+"] is not a valid wall placement")
+            engineData.logger.error("["+str(playerMove.r1)+","+str(playerMove.c1)+"]->["+str(playerMove.r2)+","+str(playerMove.c2)+"] is not a valid wall placement")
             return False
         if playerMove.r1 < 0 or playerMove.r2 <= 0 or playerMove.r1 >= 9 or playerMove.r2 > 9 or playerMove.c1 < 0 or playerMove.c2 <= 0 or playerMove.c1 >= 9 or playerMove.c2 > 9:
-            engineData.logger.error("Wall ["+playerMove.r1+","+playerMove.c1+"]->["+playerMove.r2+","+playerMove.c2+"] is outside the board")
+            engineData.logger.error("Wall ["+str(playerMove.r1)+","+str(playerMove.c1)+"]->["+str(playerMove.r2)+","+str(playerMove.c2)+"] is outside the board")
             return False
         if playerMove.r1 == playerMove.r2:
             if [playerMove.r1,playerMove.c2 - 1] in engineData.wallsH or [playerMove.r1,playerMove.c2 - 1] in engineData.wallsV:
@@ -272,7 +272,7 @@ def validate_move(engineData, playerMove):
         if [playerMove.r2,playerMove.c2] not in neighbors:
             print(neighbors)
             print(str(engineData.board[playerMove.r1][playerMove.c1]))
-            engineData.logger.error("["+playerMove.r2+","+playerMove.c2+"] does not connect to ["+playerMove.r1+","+playerMove.c1+"]")
+            engineData.logger.error("["+str(playerMove.r2)+","+str(playerMove.c2)+"] does not connect to ["+str(playerMove.r1)+","+str(playerMove.c1)+"]")
             return False
     
     return True
