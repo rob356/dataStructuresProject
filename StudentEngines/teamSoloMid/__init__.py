@@ -10,6 +10,7 @@ from Engine.security import GameException
 from .engineData import EngineData 
 from .myQueue import *
 from .myStack import *
+from copy import deepcopy
 
 
 """
@@ -262,7 +263,7 @@ def validate_move(engineData, playerMove):
             return False
         
     else:
-        if playerMove.r1 != engineData.players[0].pos[0] or playerMove.c1 != engineData.players[0].pos[1]:
+        if playerMove.r1 != engineData.players[playerMove.playerId-1].pos[0] or playerMove.c1 != engineData.players[playerMove.playerId-1].pos[1]:
             engineData.logger.error("Initial position is not correct")
             return False
         if playerMove.r2 < 0 or playerMove.r2 >= 9 or playerMove.c2 < 0 or playerMove.c2 >= 9:
@@ -270,9 +271,36 @@ def validate_move(engineData, playerMove):
             return False
         neighbors = get_neighbors(engineData,playerMove.r1,playerMove.c1)
         if [playerMove.r2,playerMove.c2] not in neighbors:
-            engineData.logger.error("["+str(playerMove.r2)+","+str(playerMove.c2)+"] does not connect to ["+str(playerMove.r1)+","+str(playerMove.c1)+"]")
-            return False
-    
+            validMoves = deepcopy(neighbors)
+            for otherPlayer in engineData.players:
+                if id == playerMove.playerId:
+                    continue
+                else:
+                    if otherPlayer.pos in neighbors:
+                        validMoves.remove(otherPlayer.pos)
+                        newNeighbors = get_neighbors(engineData,otherPlayer.pos[0],otherPlayer.pos[1])
+                        newNeighbors.remove([playerMove.r1,playerMove.c1])
+                        for otherPlayerJump in engineData.players:
+                            if otherPlayer.pos in newNeighbors:
+                                newNeighbors.remove(otherPlayerJump.pos)
+                        if [playerMove.r1-2,playerMove.c1] in newNeighbors:
+                            validMoves.append([playerMove.r1-2,playerMove.c1])
+                        elif [playerMove.r1,playerMove.c1+2] in newNeighbors:
+                            validMoves.append([playerMove.r1,playerMove.c1+2])
+                        elif [playerMove.r1+2,playerMove.c1] in newNeighbors:
+                            validMoves.append([playerMove.r1+2,playerMove.c1])
+                        elif [playerMove.r1,playerMove.c1-2] in newNeighbors:
+                            validMoves.append([playerMove.r1,playerMove.c1-2])
+                        else:
+                            for neighbor in newNeighbors:
+                                validMoves.append(neighbor)
+            if [playerMove.r2,playerMove.c2] not in validMoves:
+                if (validMoves == []) and ([playerMove.r2,playerMove.c2] == [playerMove.r1,playerMove.c1]) and (engineData.players[playerMove.playerId - 1].walls == 0):
+                    return True
+                else:
+                    engineData.logger.error("["+str(playerMove.r2)+","+str(playerMove.c2)+"] does not connect to ["+str(playerMove.r1)+","+str(playerMove.c1)+"]")
+                    return False
+        
     return True
 
 def initialize_player(engineData, playerNum):
@@ -293,7 +321,9 @@ def initialize_player(engineData, playerNum):
     
     # Step 1
     # Fetch the reference to the model from your engineData.
-    model = None
+    numWallsDict = engineData.config['NUM_WALLS']
+    engineData.model.setPlayerData(playerNum, engineData.model.getPlayerModule(playerNum).init(engineData.logger, playerNum, numWallsDict[len(engineData.players)], engineData.model.playerHomes))
+    
     
     # Step 2
     # Get the player module from the model using model.getPlayerModule.
@@ -340,6 +370,15 @@ def next_move(engineData):
     # Get playerMove object from the current player using player module's move
     # function.
     # (At this point you do not need to record any player's playerData.)
+    if len(engineData.preMoves) > 0:
+        engineData.logger.write('processing PRE_MOVE')
+        playerMove = engineData.preMoves.pop(0)
+    else:
+        # Get move from player  
+        engineData.logger.write('processing player move')
+        playerModule = engineData.model.getPlayerModule(engineData.currentPlayer)
+        print(str(playerModule))
+        playerMove = playerModule.move(engineData.model.getPlayerData(engineData.currentPlayer)) 
     
     # Step 2
     # Validate the move.
@@ -360,6 +399,24 @@ def next_move(engineData):
     #                                           model.setPlayerData
     #
     #     [ !!! Obtain playerData using model.getPlayerData ??? ]
+    
+    if validate_move(engineData, playerMove) == True:
+        last_move(engineData, playerMove)
+        engineData.model.makeMove(playerMove)
+        for playerNum in range(1,len(engineData.model.playerHomes)+1):
+            playerModule = engineData.model.getPlayerModule(playerNum)
+            playerData = playerModule.last_move(engineData.model.getPlayerData(playerNum), playerMove)
+            engineData.model.setPlayerData(playerNum, playerData)
+    else:
+        if len(engineData.preMoves) > 0:
+            exit_due_to_error("Invalid Pre-Move, exiting...")
+        else:
+            exit_due_to_error("Player "+str(engineData.currentPlayer)+" made an invalid move, exiting...")
+            
+    if engineData.currentPlayer == len(engineData.model.playerHomes):
+        engineData.currentPlayer = 1
+    else:
+        engineData.currentPlayer += 1
     
     # Safety tip: rather than passing the playerMove object, pass a copy of it
     # by calling playerMove.getCopy() to ensure that there is no harm done if

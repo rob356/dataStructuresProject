@@ -28,7 +28,7 @@ class EngineData(object):
     """
     
     # Add other slots as needed
-    __slots__ = ('logger', 'config', 'model', 'board', 'wallsH', 'wallsV', 'players')
+    __slots__ = ('logger', 'config', 'model', 'board', 'wallsH', 'wallsV', 'players', 'preMoves', 'currentPlayer')
     
     def __init__(self, logger, config, model):
         """
@@ -43,6 +43,8 @@ class EngineData(object):
         self.model = model
         self.wallsH = []
         self.wallsV = []
+        self.preMoves = config['PRE_MOVE']
+        self.currentPlayer = 1
         
         # initialize any other slots you require here
         
@@ -66,9 +68,9 @@ class EngineData(object):
             boardData.append(rowData)
             
         self.players = []
-        walls = 20 #FIX ME LATER
+        wallsDict = config['NUM_WALLS'] #FIX ME LATER
         for home in model.playerHomes:
-            self.players.append(PlayerBoard(home,walls))
+            self.players.append(PlayerBoard(home,wallsDict[len(model.playerHomes)]))
             
         self.board = boardData
         
