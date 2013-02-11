@@ -70,7 +70,22 @@ class EngineData(object):
         self.players = []
         wallsDict = config['NUM_WALLS'] #FIX ME LATER
         for home in model.playerHomes:
-            self.players.append(PlayerBoard(home,wallsDict[len(model.playerHomes)]))
+            player = PlayerBoard(home,wallsDict[len(model.playerHomes)])
+            destinations = []
+            if home[0] == 0:
+                for col in range(0,9):
+                    destinations.append((boardData[8][col].r,boardData[8][col].c))
+            elif home[0] == 8:
+                for col in range(0,9):
+                    destinations.append((boardData[0][col].r,boardData[0][col].c))
+            elif home[1] == 0:
+                for row in range(0,9):
+                    destinations.append((boardData[row][8].r,boardData[row][8].c))
+            elif home[1] == 8:
+                for row in range(0,9):
+                    destinations.append((boardData[row][0].r,boardData[row][0].c))
+            player.destinations = destinations
+            self.players.append(player)
             
         self.board = boardData
         

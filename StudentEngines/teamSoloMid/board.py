@@ -40,8 +40,9 @@ class BoardSquare:
         return "| Top="+str(self.top)+",Left="+str(self.left)+",Right="+str(self.right)+",Down="+str(self.down)+",r="+str(self.r)+",c="+str(self.c)+" "
     
 class PlayerBoard:
-    __slots__=('pos','walls')
+    __slots__=('pos','walls','destinations')
     
     def __init__(self,pos,walls):
         self.pos = pos
         self.walls = walls
+        print(str(walls))

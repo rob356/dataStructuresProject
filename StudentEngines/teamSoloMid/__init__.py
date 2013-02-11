@@ -11,6 +11,8 @@ from .engineData import EngineData
 from .myQueue import *
 from .myStack import *
 from copy import deepcopy
+from copy import copy
+import random
 
 
 """
@@ -95,6 +97,7 @@ def last_move(engineData, playerMove):
                 engineData.board[playerMove.r1][playerMove.c1 - 1].right = False
                 engineData.board[playerMove.r1 + 1][playerMove.c1 - 1].right = False
             engineData.wallsV.append([playerMove.r2 - 1,playerMove.c1])
+        engineData.players[playerMove.playerId-1].walls -= 1
                 
     else:
         engineData.players[playerMove.playerId - 1].pos = [playerMove.r2,playerMove.c2]
@@ -161,7 +164,7 @@ def get_shortest_path(engineData, r1, c1, destinations):
     # You will probably find the get_neighbors function helpful.
     
     # Replace the line below with your computations.
-    source = engineData.board[r1][c1]
+    source = (r1,c1)
     #destination = engineData.board[r2][c2]
     # 'prime' the dispenser with the source 
     dispenser = Queue()
@@ -175,14 +178,15 @@ def get_shortest_path(engineData, r1, c1, destinations):
     # is empty (no path)
     while not emptyQueue(dispenser):
         current = front(dispenser)
+        #current = (currentSquare.r,currentSquare.c)
         dequeue(dispenser)
         if current in destinations:
             break
         # loop over all neighbors of current
         neighbors = []
-        neighborCoords = get_neighbors(engineData,current.r,current.c)
+        neighborCoords = get_neighbors(engineData,current[0],current[1])
         for x in neighborCoords:
-            neighbors.append(engineData.board[x[0]][x[1]])
+            neighbors.append((engineData.board[x[0]][x[1]].r,engineData.board[x[0]][x[1]].c))
         
         for neighbor in neighbors:
             # process unvisited neighbors
@@ -208,8 +212,8 @@ def get_shortest_path(engineData, r1, c1, destinations):
     
     path = []
     for jump in pathSquares:
-        path.append([jump.r,jump.c])
-        
+        path.append([jump[0],jump[1]])
+
     return path
         
 
@@ -228,9 +232,9 @@ def validate_move(engineData, playerMove):
                         move just made
         Returns: a bool representing whether or not the given move is valid
     """
-
     if not playerMove.move:
         if engineData.players[playerMove.playerId - 1].walls <= 0:
+            print("Move: "+str(playerMove))
             engineData.logger.error("No walls remaining for player " + str(playerMove.playerId))
             return False
         if ((playerMove.r1 - playerMove.r2 == 0) and (playerMove.c2 - playerMove.c1 != 2)) or ((playerMove.c1 - playerMove.c2 == 0) and (playerMove.r2 - playerMove.r1 != 2)):
@@ -255,12 +259,15 @@ def validate_move(engineData, playerMove):
                 if [playerMove.r1,playerMove.c1] in engineData.wallsV or [playerMove.r2,playerMove.c2] in engineData.wallsV:
                     engineData.logger.error("Wall intersects another wall")
                     return False
-        destinations = []
-        for col in range(0,9):
-            destinations.append(engineData.board[0][col])
-        if get_shortest_path(engineData,engineData.players[0].pos[0],engineData.players[0].pos[1],destinations) == []:
-            engineData.logger.error("Wall blocks player path")
-            return False
+        engineDataWithWall = copy(engineData)
+        engineDataWithWall.players = deepcopy(engineData.players)
+        for x in range(0,len(engineData.board)):
+            engineDataWithWall.board[x] = deepcopy(engineData.board[x])
+        last_move(engineDataWithWall,playerMove)
+        for player in engineData.players:
+            if get_shortest_path(engineDataWithWall,player.pos[0],player.pos[1],player.destinations) == []:
+                engineData.logger.error("Wall blocks player path")
+                return False
         
     else:
         if playerMove.r1 != engineData.players[playerMove.playerId-1].pos[0] or playerMove.c1 != engineData.players[playerMove.playerId-1].pos[1]:
@@ -281,7 +288,7 @@ def validate_move(engineData, playerMove):
                         newNeighbors = get_neighbors(engineData,otherPlayer.pos[0],otherPlayer.pos[1])
                         newNeighbors.remove([playerMove.r1,playerMove.c1])
                         for otherPlayerJump in engineData.players:
-                            if otherPlayer.pos in newNeighbors:
+                            if otherPlayerJump.pos in newNeighbors:
                                 newNeighbors.remove(otherPlayerJump.pos)
                         if [playerMove.r1-2,playerMove.c1] in newNeighbors:
                             validMoves.append([playerMove.r1-2,playerMove.c1])
@@ -300,7 +307,11 @@ def validate_move(engineData, playerMove):
                 else:
                     engineData.logger.error("["+str(playerMove.r2)+","+str(playerMove.c2)+"] does not connect to ["+str(playerMove.r1)+","+str(playerMove.c1)+"]")
                     return False
-        
+        for player in engineData.players:
+            if (playerMove.r2 == player.pos[0]) and (playerMove.c2 == player.pos[1]):
+                engineData.logger.error("A player is already in that spot")
+                return False
+  
     return True
 
 def initialize_player(engineData, playerNum):
@@ -377,7 +388,6 @@ def next_move(engineData):
         # Get move from player  
         engineData.logger.write('processing player move')
         playerModule = engineData.model.getPlayerModule(engineData.currentPlayer)
-        print(str(playerModule))
         playerMove = playerModule.move(engineData.model.getPlayerData(engineData.currentPlayer)) 
     
     # Step 2
@@ -400,6 +410,9 @@ def next_move(engineData):
     #
     #     [ !!! Obtain playerData using model.getPlayerData ??? ]
     
+    if playerMove.playerId != engineData.currentPlayer:
+        exit_due_to_error("Invalid player id, exiting...")
+    
     if validate_move(engineData, playerMove) == True:
         last_move(engineData, playerMove)
         engineData.model.makeMove(playerMove)
@@ -409,8 +422,10 @@ def next_move(engineData):
             engineData.model.setPlayerData(playerNum, playerData)
     else:
         if len(engineData.preMoves) > 0:
+            print("exiting...")
             exit_due_to_error("Invalid Pre-Move, exiting...")
         else:
+            print("exiting...")
             exit_due_to_error("Player "+str(engineData.currentPlayer)+" made an invalid move, exiting...")
             
     if engineData.currentPlayer == len(engineData.model.playerHomes):
@@ -459,7 +474,74 @@ def generate_board(engineData):
     # this controls how many PlayerMoves you generate in this function
     # note that this number should always be even due to the asymmetry of the
     # game board
-    numWalls = None
+    numWalls = engineData.config['STUDENT_ENGINE_WALLS']
+    
+    isGood = False
+    
+    while not isGood:
+        isGood = True
+        walls = []
+        allWalls = []
+        noCollideCenterH = []
+        noCollideCenterV = []
+        for x in range(0,numWalls):
+            startRow = random.randrange(1,4)
+            startCol = random.randrange(0,4)
+            walls.append([startRow,startCol,startRow,startCol+2])
+            startCol += 2
+            if startCol+2 > 9:
+                startCol = 1
+                startRow += 1
+        for wall in walls:
+            allWalls.append(wall)
+            allWalls.append([9-wall[2],9-wall[3],9-wall[0],9-wall[1]])
+            if len(engineData.players) == 4:
+                if wall[0] == wall[2]:
+                    allWalls.append([wall[1],9-wall[0],wall[3],9-wall[2]])
+                    allWalls.append([9-wall[3],wall[2],9-wall[1],wall[0]])
+                else:
+                    allWalls.append([wall[3],9-wall[2],wall[1],9-wall[0]])
+                    allWalls.append([9-wall[1],wall[0],9-wall[3],wall[2]])
+        for wall in allWalls:
+            if wall[0] == wall[2]:
+                noCollideCenterH.append([wall[0],wall[1]+1])
+            else:
+                noCollideCenterV.append([wall[0]+1,wall[1]])
+        for wall in allWalls:
+            if wall[0] == wall[2]:
+                if [wall[0],wall[3] - 1] in noCollideCenterH or [wall[0],wall[3] - 1] in noCollideCenterV:
+                    isGood = False
+                    break
+                else:
+                    if [wall[0],wall[3]] in noCollideCenterH or [wall[0],wall[1]] in noCollideCenterH:
+                        isGood = False
+                        break
+            if wall[1] == wall[3]:
+                if [wall[2] - 1,wall[1]] in noCollideCenterH or [wall[2] - 1,wall[1]] in noCollideCenterV:
+                    isGood = False
+                    break
+                else:
+                    if [wall[0],wall[1]] in noCollideCenterV or [wall[2],wall[3]] in noCollideCenterV:
+                        isGood = False
+                        break
+                
+    playerMoves = []
+    currentPlayer = 1    
+    for wall in allWalls:
+        print(wall)
+        playerMoves.append(PlayerMove(currentPlayer, False, wall[0], wall[1], wall[2], wall[3]))
+        if currentPlayer == len(engineData.players):
+            currentPlayer = 1
+        else:
+            currentPlayer += 1
+    
+    for move in playerMoves: 
+        last_move(engineData, move)
+        engineData.model.makeMove(move)
+        for playerNum in range(1,len(engineData.model.playerHomes)+1):
+            playerModule = engineData.model.getPlayerModule(playerNum)
+            playerData = playerModule.last_move(engineData.model.getPlayerData(playerNum), move)
+            engineData.model.setPlayerData(playerNum, playerData)
     
     # Generate PlayerMoves to be made
     
